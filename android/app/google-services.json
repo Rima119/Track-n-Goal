@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "290387344582",
+    "project_id": "track-n-goal",
+    "storage_bucket": "track-n-goal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290387344582:android:5a398bd539efd3e52bebc7",
+        "android_client_info": {
+          "package_name": "com.example.trackn_goal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290387344582-6jrqip5topo0tan3i3ke6fqdfjpmvki5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS-Stt5qqu8WR8OOIrEdw0i5SfO9j71Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290387344582-6jrqip5topo0tan3i3ke6fqdfjpmvki5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
