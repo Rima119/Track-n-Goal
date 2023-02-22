@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:uuid/uuid.dart';
 
 class AddGoalPage extends StatefulWidget {
   AddGoalPage({Key key}) : super(key: key);
@@ -9,6 +11,36 @@ class AddGoalPage extends StatefulWidget {
 }
 
 class _AddGoalPageState extends State<AddGoalPage> {
+  final _titleController = TextEditingController();
+  final _descriptionController = TextEditingController();
+
+  Future<void> addGoal(String goalTitle, String goalDescription) async {
+    // Open the database
+    final Database db = await openDatabase(
+      'goals.db',
+      version: 1,
+      onCreate: (Database db, int version) async {
+        // Create the goals table if it doesn't already exist
+        await db.execute(
+            'CREATE TABLE goals (id TEXT PRIMARY KEY, title TEXT, description TEXT)');
+      },
+    );
+
+    // Insert the goal into the database
+    await db.insert(
+      'goals',
+      {
+        'id': Uuid().v4().toString(),
+        'title': goalTitle,
+        'description': goalDescription
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+
+    // Close the database
+    //await db.close();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,7 +178,35 @@ class _AddGoalPageState extends State<AddGoalPage> {
   }
 
   Widget button() {
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        addGoal(_titleController.text, _descriptionController.text);
+      },
+      child: Container(
+        height: 56,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff8a12f1),
+              Color(0xff8a12f1),
+            ],
+          ),
+        ),
+        child: Center(
+          child: Text(
+            "Add Goal",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      ),
+    );
+    /*return Container(
       height: 56,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -168,7 +228,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
           ),
         ),
       ),
-    );
+    );*/
   }
 
   Widget description() {
@@ -180,6 +240,13 @@ class _AddGoalPageState extends State<AddGoalPage> {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextFormField(
+        controller: _descriptionController,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter a description';
+          }
+          return null;
+        },
         style: TextStyle(
           color: Colors.grey,
           fontSize: 17,
@@ -232,6 +299,13 @@ class _AddGoalPageState extends State<AddGoalPage> {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextFormField(
+        controller: _titleController,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter a title';
+          }
+          return null;
+        },
         style: TextStyle(
           color: Colors.grey,
           fontSize: 17,
