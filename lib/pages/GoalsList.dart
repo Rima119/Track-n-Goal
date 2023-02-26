@@ -101,48 +101,79 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
       ),
       body: _goals.isEmpty
           ? Center(child: Text('No goals yet'))
-          : ListView.builder(
-              itemCount: _goals.length,
-              itemBuilder: (context, index) {
-                final goal = _goals[index];
+          : Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Color(0Xff1d1e26),
+                  Color(0Xff252041),
+                ]),
+              ),
+              child: Column(
+                children: [
+                  searchBox(),
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: _goals.length,
+                      itemBuilder: (context, index) {
+                        final goal = _goals[index];
 
-                return ListTile(
-                    title: Text(goal["title"]),
-                    subtitle: Text(goal["description"]),
-                    //add a delete button
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                          icon: Icon(Icons.delete),
-                          onPressed: () async {
-                            final db = await database;
-                            await db.delete(
-                              'goals',
-                              where: 'id = ?',
-                              whereArgs: [goal["id"]],
-                            );
-                            _fetchGoals();
-                          },
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.edit),
-                          onPressed: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(
-                              builder: (_) => EditGoalScreen(
-                                  id: goal["id"],
-                                  title: goal["title"],
-                                  description: goal["description"]),
-                            ))
-                                .then((_) {
-                              _fetchGoals();
-                            });
-                          },
-                        ),
-                      ],
-                    ));
-              },
+                        return ListTile(
+                            //change background color of list tile
+                            tileColor: Color.fromARGB(255, 37, 59, 158),
+                            contentPadding: EdgeInsets.all(16),
+                            title: Text(
+                              goal["title"],
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            subtitle: Text(
+                              goal["description"],
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
+                            ),
+                            //add a delete button
+                            trailing: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                IconButton(
+                                  icon: Icon(Icons.delete, color: Colors.red),
+                                  onPressed: () async {
+                                    final db = await database;
+                                    await db.delete(
+                                      'goals',
+                                      where: 'id = ?',
+                                      whereArgs: [goal["id"]],
+                                    );
+                                    _fetchGoals();
+                                  },
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.edit, color: Colors.white),
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (_) => EditGoalScreen(
+                                          id: goal["id"],
+                                          title: goal["title"],
+                                          description: goal["description"]),
+                                    ))
+                                        .then((_) {
+                                      _fetchGoals();
+                                    });
+                                  },
+                                ),
+                              ],
+                            ));
+                      },
+                    ),
+                  )
+                ],
+              ),
             ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -158,4 +189,32 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
       ),
     );
   }
+}
+
+Widget searchBox() {
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 15),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: TextField(
+      //onChanged: (value) => _runFilter(value),
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.all(0),
+        prefixIcon: Icon(
+          Icons.search,
+          color: Colors.black,
+          size: 20,
+        ),
+        prefixIconConstraints: BoxConstraints(
+          maxHeight: 20,
+          minWidth: 25,
+        ),
+        border: InputBorder.none,
+        hintText: 'Search',
+        hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+      ),
+    ),
+  );
 }

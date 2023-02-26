@@ -54,6 +54,10 @@ class _EditGoalScreenState extends State<EditGoalScreen> {
         child: Column(
           children: [
             TextFormField(
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 17,
+              ),
               decoration: InputDecoration(
                 labelText: 'Title',
                 hintText: 'Enter the goal title',
@@ -67,6 +71,10 @@ class _EditGoalScreenState extends State<EditGoalScreen> {
               },
             ),
             TextFormField(
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 17,
+              ),
               decoration: InputDecoration(
                 labelText: 'Description',
                 hintText: 'Enter the goal description',
