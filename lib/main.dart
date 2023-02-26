@@ -1,5 +1,5 @@
 import 'package:trackn_goal/Service/Auth_Service.dart';
-import 'package:trackn_goal/pages/AddGoal.dart';
+import 'package:trackn_goal/pages/AddGoal.dart.';
 import 'package:trackn_goal/pages/HomePage.dart';
 import 'package:trackn_goal/pages/SignInPage.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: AddGoalPage(),
     );
   }
 }

@@ -145,19 +145,19 @@ class _AddGoalPageState extends State<AddGoalPage> {
                         SizedBox(
                           width: 20,
                         ),
-                        chipData("Studies", 0xff2bc8d9),
+                        chipData("Studies", 0xffe5915a),
                         SizedBox(
                           width: 20,
                         ),
-                        chipData("Learning", 0xff2bc8d9),
+                        chipData("Learning", 0xffb58891),
                         SizedBox(
                           width: 20,
                         ),
-                        chipData("Food", 0xff2bc8d9),
+                        chipData("Food", 0xffb5589d),
                         SizedBox(
                           width: 20,
                         ),
-                        chipData("Design", 0xff2bc8d9),
+                        chipData("Design", 0xffb5c7df),
                       ],
                     ),
                     SizedBox(

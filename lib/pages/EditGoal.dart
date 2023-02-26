@@ -4,8 +4,7 @@ import 'package:sqflite/sqflite.dart';
 class EditGoalScreen extends StatefulWidget {
   final id, title, description;
 
-  EditGoalScreen(
-      {required this.id, required this.title, required this.description});
+  EditGoalScreen({this.id, this.title, this.description});
 
   @override
   _EditGoalScreenState createState() => _EditGoalScreenState();
@@ -82,7 +81,7 @@ class _EditGoalScreenState extends State<EditGoalScreen> {
             ),
             ElevatedButton(
               onPressed: () async {
-                if (_formKey.currentState!.validate()) {
+                if (_formKey.currentState.validate()) {
                   _editGoal(widget.id, _titleController.text,
                       _descriptionController.text);
                   Navigator.of(context).pop();
