@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                           alignment: Alignment.center,
                           //use the crosshair image from the images folder
 
-                          child: Image.asset('images/crosshair.png'))),
+                          child: Image.asset('assets/crosshair.png'))),
                   const SizedBox(height: 20),
                   const Text("Track'N Goal",
                       textAlign: TextAlign.center,
