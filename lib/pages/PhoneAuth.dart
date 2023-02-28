@@ -24,7 +24,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Color.fromARGB(255, 88, 101, 110),
       appBar: AppBar(
         backgroundColor: Colors.black87,
         title: Text(
@@ -83,15 +83,15 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
                 children: [
                   TextSpan(
                     text: "Send OTP again in ",
-                    style: TextStyle(fontSize: 16, color: Colors.yellowAccent),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                   TextSpan(
                     text: "00:$start",
-                    style: TextStyle(fontSize: 16, color: Colors.pinkAccent),
+                    style: TextStyle(fontSize: 16, color: Colors.redAccent),
                   ),
                   TextSpan(
                     text: " sec ",
-                    style: TextStyle(fontSize: 16, color: Colors.yellowAccent),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ],
               )),
@@ -107,11 +107,15 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
                   height: 60,
                   width: MediaQuery.of(context).size.width - 60,
                   decoration: BoxDecoration(
-                      color: Color(0xffff9601),
+                      gradient: LinearGradient(colors: [
+                        Color.fromARGB(255, 21, 45, 153),
+                        Color(0xffff9068),
+                        Color.fromARGB(255, 21, 45, 153)
+                      ]),
                       borderRadius: BorderRadius.circular(15)),
                   child: Center(
                     child: Text(
-                      "Lets Go",
+                      "Sign Up",
                       style: TextStyle(
                           fontSize: 17,
                           color: Color(0xfffbe2ae),
@@ -185,7 +189,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
           prefixIcon: Padding(
             padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 15),
             child: Text(
-              " (+91) ",
+              " (+212) ",
               style: TextStyle(color: Colors.white, fontSize: 17),
             ),
           ),
@@ -199,7 +203,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
                       buttonName = "Resend";
                     });
                     await authClass.verifyPhoneNumber(
-                        "+91 ${phoneController.text}", context, setData);
+                        "+212 ${phoneController.text}", context, setData);
                   },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),

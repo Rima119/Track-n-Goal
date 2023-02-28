@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:trackn_goal/Service/Auth_Service.dart';
 import 'package:trackn_goal/pages/AddGoal.dart.';
 import 'package:trackn_goal/pages/HomePage.dart';
@@ -8,7 +9,20 @@ import 'package:trackn_goal/pages/SignUpPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+      options: FirebaseOptions(
+        apiKey: "AIzaSyBrzU9k8LLJ5pK9jrHSD1h4QTpBzOvcZcE",
+        appId: "1:290387344582:web:42e3a0edaf5a93842bebc7",
+        messagingSenderId: "290387344582",
+        projectId: "track-n-goal",
+      ),
+    );
+  } else {
+    await Firebase.initializeApp();
+  }
+
   runApp(MyApp());
 }
 

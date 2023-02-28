@@ -1,4 +1,5 @@
 import 'package:trackn_goal/Service/Auth_Service.dart';
+import 'package:trackn_goal/pages/PhoneAuth.dart';
 import 'package:trackn_goal/pages/SignUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +28,7 @@ class _SignInPageState extends State<SignInPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.black,
+          color: Color.fromARGB(255, 88, 101, 110),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -48,7 +49,10 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(
                 height: 15,
               ),
-              buttonItem("assets/phone.svg", "Continue with Mobile", 30, () {}),
+              buttonItem("assets/phone.svg", "Continue with Mobile", 30, () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => PhoneAuthPage()));
+              }),
               SizedBox(
                 height: 18,
               ),
@@ -75,7 +79,7 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "If you don't have an Account? ",
+                    "Still Don't have an Account? ",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
@@ -89,7 +93,7 @@ class _SignInPageState extends State<SignInPage> {
                           (route) => false);
                     },
                     child: Text(
-                      "SignUp",
+                      "Register Here!",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -146,9 +150,9 @@ class _SignInPageState extends State<SignInPage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(colors: [
-            Color(0xfffd746c),
+            Color.fromARGB(255, 21, 45, 153),
             Color(0xffff9068),
-            Color(0xfffd746c)
+            Color.fromARGB(255, 21, 45, 153)
           ]),
         ),
         child: Center(
@@ -230,7 +234,7 @@ class _SignInPageState extends State<SignInPage> {
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
               width: 1.5,
-              color: Colors.amber,
+              color: Color.fromARGB(255, 21, 45, 153),
             ),
           ),
           enabledBorder: OutlineInputBorder(

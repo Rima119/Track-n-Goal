@@ -24,7 +24,7 @@ class ButtonItem extends StatelessWidget {
         height: 60,
         width: MediaQuery.of(context).size.width - 60,
         child: Card(
-          color: Colors.black,
+          color: Color.fromARGB(255, 212, 148, 148),
           shape: RoundedRectangleBorder(
             side: BorderSide(color: Colors.grey, width: 1),
             borderRadius: BorderRadius.circular(15),

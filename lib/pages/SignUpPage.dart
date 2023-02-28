@@ -27,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.black,
+          color: Color.fromARGB(255, 88, 101, 110),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -79,7 +79,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "If you alredy have an Account? ",
+                    "Alredy have an Account? ",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
@@ -93,7 +93,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           (route) => false);
                     },
                     child: Text(
-                      "Login",
+                      "Sign In Here!",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -142,9 +142,9 @@ class _SignUpPageState extends State<SignUpPage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(colors: [
-            Color(0xfffd746c),
+            Color.fromARGB(255, 21, 45, 153),
             Color(0xffff9068),
-            Color(0xfffd746c)
+            Color.fromARGB(255, 21, 45, 153)
           ]),
         ),
         child: Center(
@@ -226,7 +226,7 @@ class _SignUpPageState extends State<SignUpPage> {
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
               width: 1.5,
-              color: Colors.amber,
+              color: Color.fromARGB(255, 21, 45, 153),
             ),
           ),
           enabledBorder: OutlineInputBorder(

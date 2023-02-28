@@ -22,9 +22,9 @@ class ColoredButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
             colors: [
-              Color(0xfffd746c),
+              Color.fromARGB(255, 21, 45, 153),
               Color(0xffff9068),
-              Color(0xfffd746c),
+              Color.fromARGB(255, 21, 45, 153),
             ],
           ),
         ),
