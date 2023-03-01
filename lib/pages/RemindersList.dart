@@ -23,6 +23,8 @@ class _RemindersListScreenState extends State<RemindersListScreen> {
     version: 1,
   );
 
+  //set notifications for all reminders
+
   @override
   void initState() {
     super.initState();

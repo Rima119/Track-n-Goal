@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(50)),
                         padding: const EdgeInsets.all(25),
                       ),
-                      child: const Text("Reminder",
+                      child: const Text("Reminders List",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(50)),
                         padding: const EdgeInsets.all(25),
                       ),
-                      child: const Text("User Account",
+                      child: const Text("Settings",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
