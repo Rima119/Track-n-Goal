@@ -62,11 +62,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
                 height: 30,
               ),
               IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => GoalsListScreen(),
-                  ));
-                },
+                onPressed: () {},
                 icon: Icon(
                   CupertinoIcons.arrow_left,
                   color: Colors.white,
