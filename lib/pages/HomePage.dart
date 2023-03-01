@@ -3,7 +3,7 @@ import 'package:trackn_goal/main.dart';
 import 'package:flutter/material.dart';
 import 'package:trackn_goal/pages/GoalsList.dart';
 import 'package:trackn_goal/pages/Settings.dart';
-import 'package:trackn_goal/pages/Reminder.dart';
+import 'package:trackn_goal/pages/RemindersList.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ReminderPage()),
+                              builder: (context) => RemindersListScreen()),
                         );
                       },
                       style: TextButton.styleFrom(

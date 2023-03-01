@@ -3,21 +3,21 @@ import 'package:sqflite/sqflite.dart';
 import 'package:uuid/uuid.dart';
 
 import 'EditGoal.dart';
-import 'AddGoal.dart';
+import 'AddReminder.dart';
 
-class GoalsListScreen extends StatefulWidget {
+class RemindersListScreen extends StatefulWidget {
   @override
-  _GoalsListScreenState createState() => _GoalsListScreenState();
+  _RemindersListScreenState createState() => _RemindersListScreenState();
 }
 
-class _GoalsListScreenState extends State<GoalsListScreen> {
-  List _goals = [];
-  List _goals2 = [];
+class _RemindersListScreenState extends State<RemindersListScreen> {
+  List _reminders = [];
+  List _reminders2 = [];
   final database = openDatabase(
-    'goals.db',
+    'reminders.db',
     onCreate: (db, version) {
       return db.execute(
-        'CREATE TABLE goals(id VARCHAR PRIMARY KEY, title TEXT, description TEXT)',
+        'CREATE TABLE reminders(id VARCHAR PRIMARY KEY, title TEXT, description TEXT, date TEXT)',
       );
     },
     version: 1,
@@ -26,7 +26,7 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
   @override
   void initState() {
     super.initState();
-    _fetchGoals();
+    _fetchReminders();
     // _addGoal();
   }
 
@@ -44,13 +44,15 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
     _fetchGoals(database);
   }*/
 
-  Future<void> _fetchGoals() async {
+  Future<void> _fetchReminders() async {
     //Retrieve goals from goals database
     final db = await database;
-    final results = await db.query('goals');
+    //Delete all reminders from database
+    //await db.delete('reminders');
+    final results = await db.query('reminders');
     setState(() {
-      _goals = results;
-      _goals2 = results;
+      _reminders = results;
+      _reminders2 = results;
     });
     /*final goals = results
         .map((row) => Goal(
@@ -59,41 +61,13 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
               description: row[2] as String,
             ))
         .toList();
+
     setState(() {
       _goals = goals;
     });*/
   }
 
-  Future<void> _addGoal() async {
-    //Add goal to goals database
-    final db = await database;
-    await db.insert(
-      'goals',
-      {
-        'id': Uuid().v4().toString(),
-        'title': "title",
-        'description': "description"
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-    final results = await db.query('goals');
-    setState(() {
-      _goals = results;
-      _goals2 = results;
-    });
-
-    /*final goals = results
-        .map((row) => Goal(
-              id: row[0] as String,
-              title: row[1] as String,
-              description: row[2] as String,
-            ))
-        .toList();
-    setState(() {
-      _goals = goals;
-    });*/
-  }
-
+  //Implementing a searching method to print goals as you type them in the search box
   Widget searchBox() {
     return Container(
       margin: EdgeInsets.all(16),
@@ -110,8 +84,8 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
         ),
         onChanged: (value) {
           setState(() {
-            _goals = value == "" ||
-                    _goals2
+            _reminders = value == "" ||
+                    _reminders2
                         .where((element) =>
                             element["title"]
                                 .toString()
@@ -123,8 +97,8 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
                                 .contains(value.toLowerCase()))
                         .toList()
                         .isEmpty
-                ? _goals2
-                : _goals2
+                ? _reminders2
+                : _reminders2
                     .where((element) =>
                         element["title"]
                             .toString()
@@ -145,10 +119,10 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Goals List'),
+        title: Text('Reminders List'),
       ),
-      body: _goals.isEmpty
-          ? Center(child: Text('No goals yet'))
+      body: _reminders.isEmpty
+          ? Center(child: Text('No Reminder set yet'))
           : Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
@@ -161,16 +135,16 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
                   searchBox(),
                   Expanded(
                     child: ListView.builder(
-                      itemCount: _goals.length,
+                      itemCount: _reminders.length,
                       itemBuilder: (context, index) {
-                        final goal = _goals[index];
+                        final reminder = _reminders[index];
 
                         return ListTile(
                             //change background color of list tile
                             tileColor: Color.fromARGB(255, 37, 59, 158),
                             contentPadding: EdgeInsets.all(16),
                             title: Text(
-                              goal["title"],
+                              reminder["title"],
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -178,7 +152,7 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
                               ),
                             ),
                             subtitle: Text(
-                              goal["description"],
+                              reminder["description"] + " " + reminder["date"],
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -193,26 +167,11 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
                                   onPressed: () async {
                                     final db = await database;
                                     await db.delete(
-                                      'goals',
+                                      'reminders',
                                       where: 'id = ?',
-                                      whereArgs: [goal["id"]],
+                                      whereArgs: [reminder["id"]],
                                     );
-                                    _fetchGoals();
-                                  },
-                                ),
-                                IconButton(
-                                  icon: Icon(Icons.edit, color: Colors.white),
-                                  onPressed: () {
-                                    Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                      builder: (_) => EditGoalScreen(
-                                          id: goal["id"],
-                                          title: goal["title"],
-                                          description: goal["description"]),
-                                    ))
-                                        .then((_) {
-                                      _fetchGoals();
-                                    });
+                                    _fetchReminders();
                                   },
                                 ),
                               ],
@@ -228,42 +187,13 @@ class _GoalsListScreenState extends State<GoalsListScreen> {
         onPressed: () {
           Navigator.of(context)
               .push(MaterialPageRoute(
-            builder: (_) => AddGoalPage(),
+            builder: (_) => AddReminderPage(),
           ))
               .then((_) {
-            _fetchGoals();
+            _fetchReminders();
           });
         },
       ),
     );
   }
 }
-
-/*Widget searchBox() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 15),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20),
-    ),
-    child: TextField(
-      //onChanged: (value) => _runFilter(value),
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(0),
-        prefixIcon: Icon(
-          Icons.search,
-          color: Colors.black,
-          size: 20,
-        ),
-        prefixIconConstraints: BoxConstraints(
-          maxHeight: 20,
-          minWidth: 25,
-        ),
-        border: InputBorder.none,
-        hintText: 'Search',
-        hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
-      ),
-    ),
-  );
-}
-*/

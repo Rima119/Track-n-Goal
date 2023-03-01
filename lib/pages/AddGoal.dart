@@ -265,7 +265,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
         maxLines: null,
         decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: "Goal Title",
+            hintText: "Goal Description",
             hintStyle: TextStyle(
               color: Colors.grey,
               fontSize: 17,
