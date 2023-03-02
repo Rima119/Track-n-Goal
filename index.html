@@ -1,13 +1,495 @@
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Track'N Goal - App Landing Page</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== lineicons CSS ======-->
+    <link rel="stylesheet" href="assets/css/lineicons.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
+
 <body>
-    <h1>Track'N Goal</h1>
-    <p>Introduction</p>
-    <p>Description</p>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#features">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#why">Why</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#video">Video</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+            
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+            
+            <div class="container">
+                <div class="row align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="header-hero-content">
+                            <h2 class="header-title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s"><span>Track'N Goal</span></h2> 
+                            <h4 class="header-title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Help People To Keep Track Of Their Goals </h4>
+                            <p class="text wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                                Our flutter-based Goal tracking Web & Mobile App 
+                                will help individuals and teams set goals and track their progress 
+                                towards those goals. It will give them a structured way to track and visualize their 
+                                goal progress through features like dashboards, remainder and settings.</p>
+                                <p class="text wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                                    Our Appliaction is available in two modes: Web Application and Mobile Application (Android & iOS devices)</p>
+                            <ul class="d-flex">
+                                <li><a href="https://github.com/Rima119/Track-n-Goal" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s"><i class="lni lni-github"></i> Github Repository</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=P9b_jq8ykCg" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s"><i class="lni lni-youtube"></i> Deployed Project Application</a></li>
+                            </ul>
+                        </div> <!-- header hero content -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-10">
+                        <div class="header-image">
+                            <img src="assets/images/homepage.png" alt="app" class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        </div> <!-- header image -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape-1"></div> <!-- header shape -->
+            <div class="header-shape-2">
+                <img src="assets/images/header-shape-2.svg" alt="shape">
+            </div> <!-- header shape -->
+        </div> <!-- header hero -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== FEATURES PART START ======-->
+    
+    <section id="features" class="services-area pt-110 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center pb-25">
+                        <h3 class="title">Features</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="about-shape"></div>
+                        <img class="app" src="assets/images/signup.jpg" alt="app">
+                    </div> <!-- about image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <h3 class="title">Multiple Sign-Up/Sign-In Options</h3>
+                            <p class="text">
+                                Our Application offer to users multiple ways to Sign-Up & Sign-In
+                                <br><br>Users can Sign-Up/Sign-In through three options:
+                                <br><br>- Email/Password
+                                <br>- Google Account
+                                <br>- Phone Number
+                                <br><br>Users can choose the desired option in the Sign-Up/Sign-In Pages.
+                            </p>
+                        </div> <!-- section title -->
+                    </div> <!-- about content -->
+                </div>
+                <div class="col-lg-6">
+                        <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                            <div class="about-shape"></div>
+                            <img class="app" src="assets/images/remainderlist.jpg" alt="app">
+                        </div> <!-- about image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <h3 class="title">Set Remiders for Goals</h3>
+                            <p class="text">
+                                Our Application offer to users the possibility to track their goals.
+                                <br><br>
+                                After creating goals, users can set reminders for the specific goals by setting the date and time.
+                                <br><br>Users can also see the reaminder goals list, edit the date/Time, or delete a remainder goal in settings.
+                            </p>
+                        </div> <!-- section title -->
+                    </div> <!-- about content -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="about-shape"></div>
+                            <img class="app" src="assets/images/settings.jpg" alt="app">
+                        </div> <!-- about image -->
+                    </div>
+                <div class="col-lg-6">
+                    <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <h3 class="title">Get Notifications</h3>
+                                <p class="text">
+                                    Our Application offer to users the possibility to recieve notifications from their devices about remainder goals.
+                                   <br><br>
+                                     Users can activate the notifications in the settings Page
+                                    <br><br>Users can also learn about the application and its licenses by clicking on About button.
+                                </p>
+                        </div> <!-- section title -->
+                    </div> <!-- about content -->
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== FEATURES PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+    
+    <section id="about" class="about-area pt-70 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center pb-25">
+                        <h3 class="title">About</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> 
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="about-shape"></div>
+                        <img class="app" src="assets/images/addGoal.jpg" alt="app">
+                    </div> <!-- about image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <h3 class="title">What inspired us to the project?</h3>
+                            <p class="text">People probably have a thousand and one daily tasks and goals that they need to manage. So, how do they set and track all these goals? 
+                                <br><br>Sure, it’s easy to write down their goals and start working towards them, but it’s also easy to forget about them a few weeks, or even days, later which is one of the biggest problems with goals.
+                                <br><br>Why? Their piece of paper doesn’t have built-in reminders or goal progress tracking features. 
+                                <br><br>So, they need a system that connects their goals to their daily actions and ensures they feel as relevant to their lives on August 20th as they do on January 1st.
+                                <br><br>Thus, we built a tracking app to help people keep track of their goals and set remainders.
+                                </p>
+                            <p class="text">This is a Portfolio Project for <a href="https://www.holbertonschool.com/">Holberton School</a></p>
+                        </div> <!-- section title -->
+                    </div> <!-- about content -->
+                </div>
+                <div class="col-lg-5">
+                    <div class="about-content mt-80 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <h3 class="title">Team Members</h3>
+                            <p class="text" style="font-size: large;">Rim EL FILALI   <a href="https://github.com/Rima119"><i class="lni lni-github"></i></a></li>
+                                <a href="https://twitter.com/RimFilali"><i class="lni lni-twitter"></i></a> <a href=""><i class="lni lni-linkedin"></i></a></li></p>
+                            <p class="text" style="font-size: large;">Ousmane KONATE   <a href="https://github.com/Kolobera"><i class="lni lni-github"></i></a>  </li>
+                                  <a href="#"><i class="lni lni-twitter"></i></a>  <a href="https://www.linkedin.com/in/konat%C3%A9-alim-a342a221b/"><i class="lni lni-linkedin"></i></a></li></p>
+                            <p class="text" style="font-size: large;">Fayçal OUEDRAOGO   <a href="https://github.com/Minervus00"><i class="lni lni-github"></i></a>  </li>
+                                  <a href="#"><i class="lni lni-twitter"></i></a> <a href="https://www.linkedin.com/in/fayçal-ouedraogo-b21690268
+                                  "><i class="lni lni-linkedin"></i></a></li></p>
+                        </div> <!-- section title -->
+                        <h3 class="title mt-50">Project Repository</h3>
+                        <a href="https://github.com/Rima119/Track-n-Goal" rel="nofollow" class="main-btn"><i class="lni lni-github"></i> Github Repository</a>
+                    </div> <!-- about content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== ABOUT PART ENDS ======-->
+    
+    <!--====== WHY PART START ======-->
+    
+    <section id="why" class="services-area pt-110 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center pb-25">
+                        <h3 class="title">Why You Should Choose our App</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-services services-color-1 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="services-icon d-flex align-items-center justify-content-center">
+                            <i class="lni lni-layers"></i>
+                        </div>
+                        <div class="services-content">
+                            <h4 class="services-title"><a href="#">Clean Design</a></h4>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-services services-color-2 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                        <div class="services-icon d-flex align-items-center justify-content-center">
+                            <i class="lni lni-layout"></i>
+                        </div>
+                        <div class="services-content">
+                            <h4 class="services-title"><a href="#">Easy to Use</a></h4>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-services services-color-3 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                        <div class="services-icon d-flex align-items-center justify-content-center">
+                            <i class="lni lni-bolt"></i>
+                        </div>
+                        <div class="services-content">
+                            <h4 class="services-title"><a href="#">Fast Loading</a></h4>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-services services-color-4 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="services-icon d-flex align-items-center justify-content-center">
+                            <i class="lni lni-protection"></i>
+                        </div>
+                        <div class="services-content">
+                            <h4 class="services-title"><a href="#">Secured</a></h4>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== WHY PART ENDS ======-->
+    
+    <!--====== VIDEO PART START ======-->
+    
+    <section id="video" class="download-area pt-70 pb-40">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center pb-25">
+                        <h3 class="title">Video</h3>
+                    </div> <!-- section title -->
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                    padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                    border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFcE1c4k7c&#x2F;watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+            </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== VIDEO PART ENDS ======-->
+    
+    <!--====== PART START ======-->
+    
+    <footer id="footer" class="footer-area">
+        
+        <div class="footer-shape shape-1"></div>
+        <div class="footer-shape shape-2"></div>
+        <div class="footer-shape shape-3"></div>
+        <div class="footer-shape shape-4"></div>
+        <div class="footer-shape shape-5"></div>
+        <div class="footer-shape shape-6"></div>
+        <div class="footer-shape shape-7"></div>
+        <div class="footer-shape shape-8">
+            <img class="svg" src="assets/images/footer-shape.svg" alt="Shape">
+        </div>
+        
+        <div class="footer-widget pt-30 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <a class="logo" href="#" >
+                                <img src="assets/images/logo.svg" alt="Logo">
+                            </a>
+                            <ul class="social">
+                                <li><a href="https://github.com/Rima119/Track-n-Goal"><i class="lni lni-github"></i></a></li>
+                                <li><a href="https://www.youtube.com/watch?v=P9b_jq8ykCg"><i class="lni lni-youtube"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div> 
+                    <div class="col-lg-5 col-md-6">
+                        <div class="footer-link d-flex flex-wrap">
+                            <div class="footer-link-wrapper mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                                <div class="footer-title">
+                                    <h4 class="title">Quick Links</h4>
+                                </div>
+                                <ul class="link">
+                                    <li><a class="" href="#">Home</a></li>
+                                    <li><a class="" href="#features">Features</a></li>
+                                    <li><a class="" href="#about">About</a></li>
+                                    <li><a class="" href="#why">Why</a></li>
+                                    <li><a class="" href="#video">Video</a></li>
+                                </ul>
+                            </div> <!-- footer link wrapper -->
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                            <div class="footer-title">
+                                <h4 class="title">Learn More</h4>
+                            </div>
+                            <ul class="contact-list">
+                                <li>
+                                    <div class="contact-info d-flex">
+                                        <div class="info-content media-body">
+                                            <p class="text"><a href="https://github.com/Rima119/Track-n-Goal"><i class="lni lni-github"></i> https://github.com/Rima119/Track-n-Goal</a></p>
+                                        </div>
+                                    </div> <!-- contact info -->
+                                </li>
+                                <li>
+                                    <div class="contact-info d-flex">
+                                        <div class="info-content media-body">
+                                            <p class="text"><a href="https://www.youtube.com/watch?v=P9b_jq8ykCg"><i class="lni lni-youtube"></i> https://www.youtube.com/watch?v=P9b_jq8ykCg</a></p>
+                                        </div>
+                                    </div> <!-- contact info -->
+                                </li>
+                            </ul> <!-- contact list -->
+                        </div> <!-- footer contact -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-text text-center">
+                                <p class="text">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>
+                            </div> <!-- copyright text -->
+                            
+                            <div class="copyright-privacy text-center">
+                                <a href="#">Report Issues</a>
+                            </div> <!-- copyright privacy -->
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    
+    <!--====== PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    
+    <!--====== PART START ======-->
+    
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-"></div> 
+            </div>
+        </div>
+    </section>
+-->
+    
+    <!--====== PART ENDS ======-->
+    
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
 </body>
+
 </html>
