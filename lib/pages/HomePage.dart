@@ -31,7 +31,13 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Container(
-        color: Colors.lightBlueAccent,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color.fromARGB(255, 4, 46, 94),
+            Color.fromARGB(255, 13, 24, 107),
+            Color.fromARGB(255, 4, 46, 94),
+          ]),
+        ),
         child: Stack(
           children: [
             Center(
@@ -41,26 +47,29 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   ClipOval(
                       child: Container(
-                          width: 180,
-                          height: 180,
-                          color: Colors.lightBlueAccent,
-                          alignment: Alignment.center,
-                          //use the crosshair image from the images folder
+                    width: 200,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        Color.fromARGB(255, 4, 46, 94),
+                        Color.fromARGB(255, 13, 24, 107),
+                        Color.fromARGB(255, 4, 46, 94),
+                      ]),
+                    ),
+                    alignment: Alignment.center,
+                    //use the crosshair image from the images folder
 
-                          child: Image.asset('assets/logo.png'))),
-                  const SizedBox(height: 20),
-                  const Text("Track'N Goal",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold)),
+                    child: Image(
+                        image: ResizeImage(AssetImage('assets/logo.png'),
+                            width: 300, height: 300)),
+                  )),
+                  const SizedBox(height: 5),
                   const Text(
                       'Success is the progressive realization of\na worthy goal or ideal',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 20,
                       )),
                   const SizedBox(height: 40),
                   Padding(
