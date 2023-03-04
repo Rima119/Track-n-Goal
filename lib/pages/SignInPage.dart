@@ -127,7 +127,8 @@ class _SignInPageState extends State<SignInPage> {
         try {
           firebase_auth.UserCredential userCredential =
               await firebaseAuth.signInWithEmailAndPassword(
-                  email: _emailController.text, password: _pwdController.text);
+                  email: _emailController.text.trim(),
+                  password: _pwdController.text);
           print(userCredential.user.email);
           setState(() {
             circular = false;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class EditGoalScreen extends StatefulWidget {
-  final id, title, description;
+  final id, title, description, user;
 
-  EditGoalScreen({this.id, this.title, this.description});
+  EditGoalScreen({this.id, this.title, this.description, this.user});
 
   @override
   _EditGoalScreenState createState() => _EditGoalScreenState();
@@ -14,26 +14,12 @@ class _EditGoalScreenState extends State<EditGoalScreen> {
   final _formKey = GlobalKey<FormState>();
   final _titleController = TextEditingController();
   final _descriptionController = TextEditingController();
-  final database = openDatabase(
-    'goals.db',
-    onCreate: (db, version) {
-      return db.execute(
-        'CREATE TABLE goals(id VARCHAR PRIMARY KEY, title TEXT, description TEXT)',
-      );
-    },
-    version: 1,
-  );
 
-  Future<void> _editGoal(id, title, description) async {
-    //update goal in goals database based on id, title, and description
-    final db = await database;
-
-    await db.update(
-      'goals',
-      {'title': title, 'description': description},
-      where: 'id = ?',
-      whereArgs: [id],
-    );
+  Future<void> _editGoal(id, title, description, user) async {
+    //update goal in cloud_firestore database
+    await FirebaseFirestore.instance.collection('goals').doc(id).set(
+        {'id': id, 'title': title, 'description': description, 'user': user},
+        SetOptions(merge: true));
   }
 
   @override
@@ -91,7 +77,7 @@ class _EditGoalScreenState extends State<EditGoalScreen> {
               onPressed: () async {
                 if (_formKey.currentState.validate()) {
                   _editGoal(widget.id, _titleController.text,
-                      _descriptionController.text);
+                      _descriptionController.text, widget.user);
                   Navigator.of(context).pop();
                 }
               },

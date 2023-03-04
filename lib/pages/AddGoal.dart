@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:trackn_goal/pages/GoalsList.dart';
 import 'package:uuid/uuid.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 
 class AddGoalPage extends StatefulWidget {
   AddGoalPage({Key key}) : super(key: key);
@@ -16,30 +18,20 @@ class _AddGoalPageState extends State<AddGoalPage> {
   final _descriptionController = TextEditingController();
 
   Future<void> addGoal(String goalTitle, String goalDescription) async {
-    // Open the database
-    final Database db = await openDatabase(
-      'goals.db',
-      version: 1,
-      onCreate: (Database db, int version) async {
-        // Create the goals table if it doesn't already exist
-        await db.execute(
-            'CREATE TABLE goals (id TEXT PRIMARY KEY, title TEXT, description TEXT)');
-      },
+    // Insert the goal into the cloud firestore database for this user
+    var id = Uuid().v4().toString();
+    await FirebaseFirestore.instance.collection('goals').doc(id).set({
+      'id': id,
+      'title': goalTitle,
+      'description': goalDescription,
+      'user': firebase_auth.FirebaseAuth.instance.currentUser.email,
+    });
+    //notify at the back of the phone screen the "the goal was successfully added to the database"
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Goal added successfully"),
+      ),
     );
-
-    // Insert the goal into the database
-    await db.insert(
-      'goals',
-      {
-        'id': Uuid().v4().toString(),
-        'title': goalTitle,
-        'description': goalDescription
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-
-    // Close the database
-    //await db.close();
   }
 
   @override
@@ -62,7 +54,11 @@ class _AddGoalPageState extends State<AddGoalPage> {
                 height: 30,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => GoalsListScreen(),
+                  ));
+                },
                 icon: Icon(
                   CupertinoIcons.arrow_left,
                   color: Colors.white,
@@ -213,29 +209,6 @@ class _AddGoalPageState extends State<AddGoalPage> {
         ),
       ),
     );
-    /*return Container(
-      height: 56,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        gradient: LinearGradient(
-          colors: [
-            Color(0xff8a12f1),
-            Color(0xff8a12f1),
-          ],
-        ),
-      ),
-      child: Center(
-        child: Text(
-          "Add Goal",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-    );*/
   }
 
   Widget description() {
@@ -261,7 +234,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
         maxLines: null,
         decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: "Goal Title",
+            hintText: "Goal Description",
             hintStyle: TextStyle(
               color: Colors.grey,
               fontSize: 17,
