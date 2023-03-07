@@ -30,7 +30,6 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
 - [Contributing](#contributing)
 - [Related projects](#relatedprojects)
 - [Licensing](#licens)
@@ -55,22 +54,26 @@ Track'N Goal is a flutter-based Goal tracking Web/Mobile (Andoid & iOS) applicat
 
 1. Install Flutter by following the instructions at https://flutter.dev/docs/get-started/install.
 
-2. Clone this repository to your local machine.
+2. Clone this repository to your local machine
+
         ```sh
         git clone https://github.com/Rima119/Track-n-Goal.git
         ```
 
-3. Navigate to the repository directory in a terminal.
+3. Navigate to the repository directory in a terminal
+
         ```sh
         cd Track-n-Goal
         ```
 
-4. Install the dependencies.
+4. Install the dependencies
+
         ```sh
         flutter pub
         ```
 
-5. Build and run the app on your device or emulator.
+5. Build and run the app on your device or emulator
+
         ```sh
         flutter run
         ```
@@ -102,4 +105,4 @@ This project is licensed under the [MIT License](https://github.com/Rima119/Trac
 [dart]: https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg
 [dart-url]: https://dart.dev
 [firebase]: https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg
-[firevase-url]: hhttps://firebase.google.com/
+[firebase-url]: https://firebase.google.com/
