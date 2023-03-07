@@ -48,7 +48,7 @@ class _SettingsPageState extends State<SettingsPage> {
       applicationName: 'TrackNGoal',
       applicationVersion: '1.0.0',
       applicationIcon: Image.asset(
-        'assets/crosshair.png',
+        'assets/logo.png',
         width: 50,
         height: 50,
       ),

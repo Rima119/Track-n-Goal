@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+// Home page of the application
 class _HomePageState extends State<HomePage> {
   AuthClass authClass = AuthClass();
   @override
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       ]),
                     ),
                     alignment: Alignment.center,
-                    //use the crosshair image from the images folder
+                    //use the logo image from the images folder
 
                     child: Image(
                         image: ResizeImage(AssetImage('assets/logo.png'),

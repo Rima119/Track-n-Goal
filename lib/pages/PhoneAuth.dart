@@ -13,6 +13,7 @@ class PhoneAuthPage extends StatefulWidget {
   _PhoneAuthPageState createState() => _PhoneAuthPageState();
 }
 
+// Implement the option of sign_in/sign_up using phone number
 class _PhoneAuthPageState extends State<PhoneAuthPage> {
   int start = 30;
   bool wait = false;

@@ -13,6 +13,7 @@ class SignUpPage extends StatefulWidget {
   _SignUpPageState createState() => _SignUpPageState();
 }
 
+// Implement sign_un page using firebaseAuth
 class _SignUpPageState extends State<SignUpPage> {
   firebase_auth.FirebaseAuth firebaseAuth = firebase_auth.FirebaseAuth.instance;
   TextEditingController _emailController = TextEditingController();
@@ -42,6 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(
                 height: 20,
               ),
+              // Google Account option
               buttonItem("assets/google.svg", "Continue with Google", 25,
                   () async {
                 await authClass.googleSignIn(context);
@@ -49,6 +51,7 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(
                 height: 15,
               ),
+              // Mobile number option
               buttonItem("assets/phone.svg", "Continue with Mobile", 30, () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (builder) => PhoneAuthPage()));
@@ -63,6 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(
                 height: 18,
               ),
+              // Email & Password option
               textItem("Email....", _emailController, false),
               SizedBox(
                 height: 15,
