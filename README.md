@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Rima119/Track-n-Goal/">
-    <img src="assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/logo.png" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Track'N Goal</h3></h3>
@@ -19,6 +19,8 @@
     <br />
     <a href="https://rima119.github.io/Track-n-Goal/">Landing Page</a>
     ·
+    <a href="https://rimcode.medium.com/trackn-goal-tracking-goal-app-f97f91ea8447">Blog Article</a>
+    .
     <a href="https://github.com/Rima119/Track-n-Goal/issues">Report Issues</a>
     ·
     <a href="https://github.com/Rima119/Track-n-Goal/issues">Request Feature</a>
@@ -31,12 +33,25 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Related projects](#relatedprojects)
+- [Related projects](#related-projects)
 - [Licensing](#licensing)
 
 
 ## Introduction
 Track'N Goal is a flutter-based Goal tracking Web/Mobile (Andoid & iOS) application that help users to achieve their goals by tracking their progress and reminding them to work on their goals.
+
+Deployed Project link: [Deployed Project](https://www.youtube.com/watch?v=P9b_jq8ykCg)
+
+Final Project Blog Article: [Blog Article](https://rimcode.medium.com/trackn-goal-tracking-goal-app-f97f91ea8447)
+
+### Authors
+
+Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.linkedin.com/in/rim-el-filali-0710a6269/)
+
+Ousmane KONATE - [Github](https://github.com/Kolobera) / [Linkedin](https://www.linkedin.com/in/konat%C3%A9-alim-a342a221b/)
+
+Fayçal OUEDRAOGO - [Github](https://github.com/Minervus00) / [Linkedin](https://www.linkedin.com/in/fay%C3%A7al-ouedraogo-b21690268/)
+
 
 ### Built With
 
