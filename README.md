@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Rima119/Track-n-Goal/">
-    <img src="assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/logo.png" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Track'N Goal</h3></h3>
@@ -33,7 +33,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Related projects](#relatedprojects)
+- [Related projects](#related-projects)
 - [Licensing](#licensing)
 
 
