@@ -142,7 +142,17 @@ When finished using the app, users can log out to ensure their account remains s
 
 
 ## Contributing
-If you have issues or questions create a pull request.
+If you have issues, questions or create a pull request.
+
+</br>
+For suggestions follow these steps:
+
+1. Fork this repository
+2. Create your feature branch (git checkout -b feature/fooBar)
+3. Commit your changes (git commit -am 'Add some fooBar')
+4. Push to the branch (git push origin feature/fooBar)
+5. Create a new Pull Request
+</br>
 Please ensure your pull request adheres to the following guidelines:
 
 - Alphabetize your entry.
@@ -160,6 +170,10 @@ Thank you for your suggestions!
 
 
 ## Related projects
+- [Minimal](https://github.com/avjinder/Minimal-Todo)
+- [Go To Do App](https://github.com/schadokar/go-to-do-app)
+- [To Do list](https://github.com/LiveLikeCounter/Flutter-Todolist)
+
 
 ## Licensing
 This project is licensed under the [MIT License](https://github.com/Rima119/Track-n-Goal/blob/main/LICENSE.txt) - see the LICENSE.txt file for details.
