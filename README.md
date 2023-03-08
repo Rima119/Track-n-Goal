@@ -75,6 +75,56 @@ Track'N Goal is a flutter-based Goal tracking Web/Mobile (Andoid & iOS) applicat
         
 
 ## Usage
+The app provides the following features:
+### -User Authentication
+Users can create an account by signing up with an email address and a password, with google, or with their mobile phone number. Once they've created an account, they can sign in to access the app's functionalities.
+
+<p align="center">
+<img src="https://drive.google.com/uc?export=view&id=1UFL9Xf8g2FRcgErRVooKhZx0a6NTDbZL" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
+</p>
+
+
+
+### -Goals Management
+After logging in, users can view a list of their goals, edit existing ones, or delete goals they no longer need.
+
+
+<p align="center">
+<img src="https://drive.google.com/uc?export=view&id=1LmYPv3Qce5qb_hIckQvgHfK6g8jDRa5n" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
+</p>
+
+They can also add new goals
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1bx359o0nYz0z_b5Zw2vjfrFuiJDNdbHQ" style="width: 250px; max-width: 100%; height: 550px;margin-right:200px;" title="Click to enlarge picture" />
+</p>
+
+
+### -Reminders
+Users can view a list of reminders associated with their goals.  They can also delete reminders they no longer need.
+
+
+<p align="center">
+<img src="https://drive.google.com/uc?export=view&id=1zmfWnGff0Be8WG1j6MRnc4h4-pnkgyqS" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" /> 
+</p>
+
+
+They can also add new reminders, specifying the date and time when they want to be reminded of a particular goal.
+
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1KP_fSmHvi8xqYEXSt2JvkzI27Onss9SY" style="margin-rignt: 40px; width: 250px; max-width: 100%; height: 550px; margin-left:50px;" title="Click to enlarge picture" />
+</p>
+
+
+### -Logging Out
+When finished using the app, users can log out to ensure their account remains secure
+
+
+<p align="center">
+<img src="https://drive.google.com/uc?export=view&id=10YDW6kZHJa061z4odHy-Q9UKdME5VhUL" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
+</p>
+
 
 ## Contributing
 
