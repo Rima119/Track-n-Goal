@@ -6,24 +6,24 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/Rima119/Track-n-Goal/">
-    <img src="assets/logo.png" alt="Logo" width="300" height="300">
+  <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project/">
+    <img src="https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/templates/static/css/images/logo.png" alt="Logo" width="600" height="250">
   </a>
 
-  <h3 align="center">Track'N Goal</h3></h3>
+  <h3 align="center">Expense Tracking</h3></h3>
 
   <p align="center">
-    A goal tracking Web/Mobile (Andoid & iOS) application.
+    An App To Track Expenses
     <br />
     <br />
     <br />
-    <a href="https://rima119.github.io/Track-n-Goal/">Landing Page</a>
+    <a href="">Landing Page</a>
     ·
-    <a href="https://rimcode.medium.com/trackn-goal-tracking-goal-app-f97f91ea8447">Blog Article</a>
+    <a href="">Blog Article</a>
     .
-    <a href="https://github.com/Rima119/Track-n-Goal/issues">Report Issues</a>
+    <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project/issues">Report Issues</a>
     ·
-    <a href="https://github.com/Rima119/Track-n-Goal/issues">Request Feature</a>
+    <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project/issues">Request Feature</a>
   </p>
 </div>
 
@@ -38,107 +38,33 @@
 
 
 ## Introduction
-Track'N Goal is a flutter-based Goal tracking Web/Mobile (Andoid & iOS) application that help users to achieve their goals by tracking their progress and reminding them to work on their goals.
+This project consist of developing an expense tracker app for managing personal finances that allows users to track their expenses, categorize them, and generate reports.
 
-Deployed Project link: [Deployed Project](https://www.youtube.com/watch?v=P9b_jq8ykCg)
+Deployed Project link: [Deployed Project](https://www.youtube.com/)
 
-Final Project Blog Article: [Blog Article](https://rimcode.medium.com/trackn-goal-tracking-goal-app-f97f91ea8447)
+Final Project Blog Article: [Blog Article]()
 
 ### Authors
 
+Robert Njonjo - [Github](https://github.com/M1urray) / [Linkedin](https://www.linkedin.com/)
+
+Dennis Kamau - [Github](https://github.com/Dkemzy) / [Linkedin](https://www.linkedin.com/in/)
+
 Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.linkedin.com/in/rim-el-filali-0710a6269/)
 
-Ousmane KONATE - [Github](https://github.com/Kolobera) / [Linkedin](https://www.linkedin.com/in/konat%C3%A9-alim-a342a221b/)
-
-Fayçal OUEDRAOGO - [Github](https://github.com/Minervus00) / [Linkedin](https://www.linkedin.com/in/fay%C3%A7al-ouedraogo-b21690268/)
-
-
 ### Built With
-
-[![Flutter][flutter]][flutter-url]
-[![Dart][dart]][dart-url]
-[![Firebase][firebase]][firebase-url]
+<p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> </p>
 
 ### Features
-- Support for both offline and online mode.
-- Sign-in with Email/Password or Google Account or Mobile phone to sync and preserve data.
-- Set Remiders for Goals
-- Set reminder notifications.
+
+- Expense Tracking: Track your expenses and categorize them for easy analysis.
+- Budgeting: Create budgets for different categories and track your spending.
+- Reports: Generate reports to get insights into your spending habits.
 
 ## Installation
-
-1. Install Flutter by following the instructions at https://flutter.dev/docs/get-started/install.
-
-2. Clone this repository to your local machine
-        
-        git clone https://github.com/Rima119/Track-n-Goal.git
-        
-
-3. Navigate to the repository directory in a terminal
-
-        cd Track-n-Goal
-        
-
-4. Install the dependencies
-
-        flutter pub
-        
-
-5. Build and run the app on your device or emulator
-
-        flutter run
         
 
 ## Usage
-The app provides the following features:
-### -User Authentication
-Users can create an account by signing up with an email address and a password, with google, or with their mobile phone number. Once they've created an account, they can sign in to access the app's functionalities.
-
-<p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1UFL9Xf8g2FRcgErRVooKhZx0a6NTDbZL" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
-</p>
-
-
-
-### -Goals Management
-After logging in, users can view a list of their goals, edit existing ones, or delete goals they no longer need.
-
-
-<p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1LmYPv3Qce5qb_hIckQvgHfK6g8jDRa5n" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
-</p>
-
-They can also add new goals
-
-<p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1bx359o0nYz0z_b5Zw2vjfrFuiJDNdbHQ" style="width: 250px; max-width: 100%; height: 550px;margin-right:200px;" title="Click to enlarge picture" />
-</p>
-
-
-### -Reminders
-Users can view a list of reminders associated with their goals.  They can also delete reminders they no longer need.
-
-
-<p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1zmfWnGff0Be8WG1j6MRnc4h4-pnkgyqS" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" /> 
-</p>
-
-
-They can also add new reminders, specifying the date and time when they want to be reminded of a particular goal.
-
-
-<p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1KP_fSmHvi8xqYEXSt2JvkzI27Onss9SY" style="margin-rignt: 40px; width: 250px; max-width: 100%; height: 550px; margin-left:50px;" title="Click to enlarge picture" />
-</p>
-
-
-### -Logging Out
-When finished using the app, users can log out to ensure their account remains secure
-
-
-<p align="center">
-<img src="https://drive.google.com/uc?export=view&id=10YDW6kZHJa061z4odHy-Q9UKdME5VhUL" style="width: 250px; max-width: 100%; height: 550px;" title="Click to enlarge picture" />
-</p>
 
 
 ## Contributing
@@ -170,30 +96,21 @@ Thank you for your suggestions!
 
 
 ## Related projects
-- [Minimal](https://github.com/avjinder/Minimal-Todo)
-- [Go To Do App](https://github.com/schadokar/go-to-do-app)
-- [To Do list](https://github.com/LiveLikeCounter/Flutter-Todolist)
 
 
 ## Licensing
-This project is licensed under the [MIT License](https://github.com/Rima119/Track-n-Goal/blob/main/LICENSE.txt) - see the LICENSE.txt file for details.
+This project is licensed under the [MIT License](https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/LICENSE) - see the LICENSE file for details.
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/Rima119/Track-n-Goal.svg?style=for-the-badge
-[contributors-url]: https://github.com/Rima119/Track-n-Goal/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Rima119/Track-n-Goal.svg?style=for-the-badge
-[forks-url]: https://github.com/Rima119/Track-n-Goal/forks
-[stars-shield]: https://img.shields.io/github/stars/Rima119/Track-n-Goal.svg?style=for-the-badge
-[stars-url]: https://github.com/Rima119/Track-n-Goal/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Rima119/Track-n-Goal.svg?style=for-the-badge
-[issues-url]: https://github.com/Rima119/Track-n-Goal/issues
-[license-shield]: https://img.shields.io/github/license/Rima119/Track-n-Goal.svg?style=for-the-badge
-[license-url]: https://github.com/Rima119/Track-n-Goal/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Dkemzy/alx-webstack-portfolio-project.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dkemzy/alx-webstack-portfolio-project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dkemzy/alx-webstack-portfolio-project.svg?style=for-the-badge
+[forks-url]: https://github.com/Dkemzy/alx-webstack-portfolio-project/forks
+[stars-shield]: https://img.shields.io/github/stars/Dkemzy/alx-webstack-portfolio-project.svg?style=for-the-badge
+[stars-url]: https://github.com/Dkemzy/alx-webstack-portfolio-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dkemzy/alx-webstack-portfolio-project.svg?style=for-the-badge
+[issues-url]: https://github.com/Dkemzy/alx-webstack-portfolio-project/issues
+[license-shield]: https://img.shields.io/github/license/Dkemzy/alx-webstack-portfolio-project.svg?style=for-the-badge
+[license-url]: https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/LICENSE
 
-[flutter]: https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg
-[flutter-url]: https://flutter.dev
-[dart]: https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg
-[dart-url]: https://dart.dev
-[firebase]: https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg
-[firebase-url]: https://firebase.google.com/
